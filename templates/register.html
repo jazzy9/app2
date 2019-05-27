@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% extends "layout.html" %}
+</head>
+<body>
+{% block content %}
+
+
+
+  <h1>Register in Secret Underground</h1>
+  <div class="content-section">
+    <form = "POST" action="">
+
+      {{ form.hidden_tag() }}
+
+      <fieldset class="form-group">
+
+        <legend class = "broder-bottom mb-4">Learn all secrets today</legend>
+
+
+        <div class="form-group">
+          {{ form.username.label(class="form-control-label") }}
+
+          {% if form.username.errors %}
+            {{ form.username(class = "form-control form-control-lg is-invalid") }}
+          <div class = "invalid-feedback">
+            {% for error in form.username.errors %}
+              <span> {{ error }} </span>
+
+            {% endfor %}
+          </div>
+
+          {% else %}
+            {{ form.username(class ="form-control form-control-lg") }}
+
+          {% endif %}
+
+
+        </div>
+
+
+        <div class="form-group">
+          {{ form.email.label(class="form-control-label") }}
+          {{ form.email(class="form-control form-control-lg") }}
+        </div>
+
+        <div class="form-group">
+          {{ form.password.label(class="form-control-label") }}
+          {{ form.password(class="form-control form-control-lg") }}
+        </div>
+
+        <div class="form-group">
+          {{ form.confirm_password.label(class="form-control-label") }}
+          {{ form.confirm_password(class="form-control form-control-lg") }}
+        </div>
+
+      </fieldset>
+
+      <div class="form-group">
+        {{ form.submit(class="btn btn-outline-info") }}
+      </div>
+
+    </div>
+  </form>
+
+      <div class = "border-top pt-3">
+        <small class="text-muted">
+          Already Have an Account?<a class="ml-2" href="{{ url_for('login') }}"> Sign In</a>
+      </div>
+
+      {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                  {{ message }}
+                </div>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+
+
+
+
+
+    {% endblock content %}
+
+</body>
+
+
+
+</html>
