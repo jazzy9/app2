@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+  	<link href="https://fonts.googleapis.com/css?family=Spectral" rel="stylesheet">
+    <link rel="stylesheet" href="/static/quizstyle.css">
+    <title>Quiz</title>
+  </head>
+  <body>
+    <div class="navbar-main">
+    <ul>
+        <li class="left"><a href="underground.html">Secrets</a>
+        <a href="About.html">P.S</a>
+        <a href="quiz.html">Quiz</a>
+        </li>
+        <li class="right">
+                <a href="recipies.html">Drinks</a>
+                <a href="overview.html">Map</a>
+                <a href="contact.html">Contact</a>
+        </li>
+    </ul>
+    </div>
+
+    <h3>Find Your Perfect Secret Bar</h3>
+
+    <form class="drinks-quiz" action="/results" method="post">
+      <div class="question1">
+        <label for="q1">What decade would you have liked to live in?</label><br>
+        <input type="radio" name="q1" value="cahoots">1940s
+        <input type="radio" name="q1" value="bathouse">1910s<br>
+        <input type="radio" name="q1" value="candlelight">1920s
+        <input type="radio" name="q1" value="opium">1903s
+      </div>
+
+      <div class="question2 qs">
+        <label for="q1">Pick a cocktail:</label><br>
+        <input type="radio" name="q2" value="cahoots">French 75
+        <input type="radio" name="q2" value="bathouse">GINspiration<br>
+        <input type="radio" name="q2" value="candlelight">Champagne
+        <input type="radio" name="q2" value="opium">The Herbalist
+      </div>
+
+      <div class="question3 qs">
+        <label for="q1">What kind of music do you prefer?</label><br>
+        <input type="radio" name="q3" value="cahoots">Swing
+        <input type="radio" name="q3" value="bathouse">Blues<br>
+        <input type="radio" name="q3" value="candlelight">Jazz
+        <input type="radio" name="q3" value="opium">Oriental
+      </div>
+
+      <div class="question4 qs">
+        <label for="q1">What kind of decour do you prefer?</label><br>
+        <input type="radio" name="q4" value="cahoots">Interwar period
+        <input type="radio" name="q4" value="bathouse">Victorial<br>
+        <input type="radio" name="q4" value="candlelight">French
+        <input type="radio" name="q4" value="opium">Indo-Chinese
+      </div>
+
+      <div class="question5 qs">
+        <label for="q1">What ambiance do you prefer?</label><br>
+        <input type="radio" name="q5" value="cahoots">Being underground
+        <input type="radio" name="q5" value="bathouse">Period furniture<br>
+        <input type="radio" name="q5" value="candlelight">Cabaret dancers
+        <input type="radio" name="q5" value="opium">Incent sticks
+      </div>
+
+      <button type="submit" value="submit" id="quizbtn">Show me the results!</button>
+
+
+    </form>
+
+
+  </body>
+</html>

@@ -1,0 +1,66 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background: black;
+  font-size: 20px;
+}
+.navbar-main{
+  position: fixed;
+  height: 70px;
+  background: black;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
+}
+a {
+text-decoration: none;
+color: white;
+font-family: 'Spectral',serif;
+font-size: 25px;
+}
+a:visited {
+  color:#EEE8AA;
+}
+a:hover {
+  color: grey;
+}
+p {
+  text-align: center;
+}
+.left {
+  float: left;
+  clear: left;
+}
+.right {
+  float: right;
+  clear: right;
+  text-align: right;
+  margin-right: 50px;
+}
+li {
+    list-style: none;
+    display: inline;
+}
+li a {
+padding: 5px;
+}
+
+h3{
+  margin-top: 100px;
+}
+form{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  color:white;
+}
+.qs{
+  padding: 20px;
+}
+#quizbtn{
+  width:150px;
+  height:50px;
+  font-size: 16px
+}
