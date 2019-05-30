@@ -1,6 +1,7 @@
 
 from flask import Flask, render_template, url_for, flash, redirect, request
 from forms import RegistrationForm, LoginForm
+import tweepy
 
 
 app = Flask(__name__)
@@ -30,15 +31,26 @@ def home():
 def about():
     return render_template('about.html', title=about)
 
+
+@app.route("/quiz")
+def quiz():
+    return render_template('quiz.html', title=quiz)
+
+@app.route("/tweets")
+def quiz():
+    return render_template('tweets.html', title=tweets)
+
+
+
 @app.route("/register",methods = ['GET','POST'])
 def register():
     form = RegistrationForm()
+    #return render_template('register.html', title ='Register', form = form)
     if form.validate_on_submit():
-        flash('Account created ', 'success')
-        return redirect(url_for('home'))
-
+            flash('Account created ', 'success')
+            #return redirect(url_for('home'))
+            return ('Account created successfully', 'success')
     return render_template('register.html', title ='Register', form = form)
-
 
 
 @app.route("/login", methods= ['GET', 'POST'])
@@ -54,6 +66,8 @@ def login():
             flash('Login unsuccessful. Please check your username and password', 'danger')
 
     return render_template('login.html', title ='Login', form = form)
+
+
 
 
 #@app.route("/home")

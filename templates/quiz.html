@@ -1,25 +1,11 @@
+
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-  	<link href="https://fonts.googleapis.com/css?family=Spectral" rel="stylesheet">
-    <link rel="stylesheet" href="/static/quizstyle.css">
-    <title>Quiz</title>
-  </head>
-  <body>
-    <div class="navbar-main">
-    <ul>
-        <li class="left"><a href="underground.html">Secrets</a>
-        <a href="About.html">P.S</a>
-        <a href="quiz.html">Quiz</a>
-        </li>
-        <li class="right">
-                <a href="recipies.html">Drinks</a>
-                <a href="overview.html">Map</a>
-                <a href="contact.html">Contact</a>
-        </li>
-    </ul>
-    </div>
+<html>
+<head>
+{% extends "layout.html" %}
+</head>
+{% block content %}
+
 
     <h3>Find Your Perfect Secret Bar</h3>
 
@@ -71,4 +57,5 @@
 
 
   </body>
+  {% endblock content %}
 </html>
